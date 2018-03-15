@@ -4,6 +4,7 @@ import jieba
 
 # 停词表
 stopword_path = 'C:\\Users\\chenyang\\Desktop\\dict.txt'
+
 # 统计关键词及个数
 def CountKey(line):
     try:
@@ -102,7 +103,7 @@ def main():
     fileName1 = "C:\\Users\\chenyang\\Desktop\\vector1"
     # 计算文档2的关键词及个数
     fileName2 = "C:\\Users\\chenyang\\Desktop\\vector2"
-    # 计算文件行数
+    
     file1 = open(fileName1, 'rU', errors='ignore', encoding='utf-8')
     for line1 in file1:
         dic1 = CountKey(line1)
