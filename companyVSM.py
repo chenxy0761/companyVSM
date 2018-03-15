@@ -112,7 +112,7 @@ def main():
             # 合并两篇文章的关键词及相似度计算
             result = MergeKeys(dic1, dic2)
             if result>0.67:
-                print(line1+"||"+line2+"--->"+str(result))
+                print(line1+"||"+line2+"--->相似度:"+str(result))
 
 if __name__ == '__main__':
     main()
