@@ -4,11 +4,11 @@ import jieba
 import jieba.analyse
 
 
-def jieba2():
+def frequency_statistics(file):
     resultFile = "C:\\Users\\chenyang\\Desktop\\Result.txt"
     resultTxt = open(resultFile, "w", errors='ignore', encoding='utf-8')
     word_dict = {}
-    for line in open('C:\\Users\\chenyang\\Desktop\\content_seg.txt', 'rU', errors='ignore', encoding='utf-8'):
+    for line in open(file, 'rU', errors='ignore', encoding='utf-8'):
         item = jieba.cut(line.strip("\n"))
         for word in item:
             if word not in word_dict:
@@ -20,4 +20,5 @@ def jieba2():
 
 
 if __name__ == '__main__':
-    jieba2()
+    filepath = 'C:\\Users\\chenyang\\Desktop\\content_seg.txt'
+    frequency_statistics(filepath)
